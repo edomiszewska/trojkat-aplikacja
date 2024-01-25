@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+
+    <title>zadanie trojkaty</title>
+</head>
+<style>
+    header{
+        display: flex;
+        justify-content: center;
+      
+    }
+    section{
+        display: flex;
+        justify-content: center;
+    }
+    .but1{
+        display: flex;
+        justify-content: center;
+    }
+</style>
+<body>
+        <div class="container"></div>
+        <header><h1>Trójkąty</h1></header>
+
+<section>
+    <form action="#">
+        <label for="bokjeden"><input type="text" name="bokjeden" id="bokjeden"></label>
+
+        <label for="bokdwa"><input type="text" name="bokdwa" id="bokdwa"></label>
+
+        <label for="boktrzy"><input type="text" name="boktrzy" id="boktrzy"></label>
+
+        <button class="but1" id="but1">Oblicz pole trójkąta: </button>
+        
+    </form>
+
+
+
+</section>
+<main>
+    <p></p>
+</main>
+
+<script>
+const bokjeden=document.querySelector(`#bokjeden`)
+const bokdwa=document.querySelector(`#bokdwa`)
+const boktrzy=document.querySelector(`#boktrzy`) 
+
+
+const but1=document.querySelector(`#but1`)
+
+but1.addEventListener(`click`, function(fun1){
+fun1.preventDefault()
+
+const tablica1=[parseFloat(bokjeden.value), parseFloat(bokdwa.value), parseFloat(boktrzy.value)]
+const tablica2=tablica1.sort((a,b)=>a-b)
+
+obwod=parseFloat(bokjeden.value)+parseFloat(bokdwa.value)+parseFloat(boktrzy.value)
+p=obwod/2
+policzpole=0
+
+
+policzpole=Math.sqrt(p*(p-parseFloat(bokjeden.value))*(p-parseFloat(bokdwa.value))*(p-parseFloat(boktrzy.value)))
+
+console.log(policzpole)
+})
+
+if(Math.pow(parseFloat(bokjeden.value),2)+Math.pow(parseFloat(bokdwa.value),2)>Math.pow(parseFloat(boktrzy.value),2)){
+
+
+
+
+
+}
+
+</script>
+</body>
+</html>
